@@ -11,6 +11,48 @@ echo -e "\e[91m
                            Made by Satya Prakash (0xKayala)                
 \e[0m"                                                      
 
+# Help menu
+display_help() {
+    echo -e "Shodanizer is a Powerful Automation tool for detecting XSS, SQLi, SSRF, Open-Redirect, etc. vulnerabilities in Web Applications\n\n"
+    echo -e "Usage: $0 [options]\n\n"
+    echo "Options:"
+    echo "  -h, --help              Display help information"
+    echo "  -d, --domain <domain>   Domain to scan with Shodan"
+    echo "  -i, --ip <ip address>   IP Address to scan with Shodan"
+    exit 0
+}
+
+# Check if Shodan is installed, if not, install it
+if ! command -v shodan &> /dev/null; then
+    echo "Installing Shodan..."
+    pip3 install -U --user shodan
+fi
+
+# Parse command line arguments
+while [[ $# -gt 0 ]]
+do
+    key="$1"
+    case $key in
+        -h|--help)
+            display_help
+            ;;
+        -d|--domain)
+            domain="$2"
+            shift
+            shift
+            ;;
+        -i|--ip)
+            ip="$2"
+            shift
+            shift
+            ;;
+        *)
+            echo "Unknown option: $key"
+            display_help
+            ;;
+    esac
+done
+
 echo "Enter the target IP or domain:"
 read target
 
@@ -23,4 +65,4 @@ else
     shodan domain "$target"
 fi
 
-echo "Scan is completed"
+echo "Shodan Scan is completed"
