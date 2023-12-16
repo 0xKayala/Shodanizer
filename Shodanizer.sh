@@ -12,6 +12,7 @@ cat << "EOF"
                            Made by Satya Prakash (0xKayala)                
 
 EOF
+echo -e "\nMade by Satya Prakash (0xKayala)"
 echo -e "\e[0m"                                                      
 
 # Help menu
