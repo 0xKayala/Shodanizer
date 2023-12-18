@@ -17,7 +17,7 @@ echo -e "\e[0m"
 
 # Help menu
 display_help() {
-    echo -e "Shodanizer is a Powerful Automation tool for detecting XSS, SQLi, SSRF, Open-Redirect, etc. vulnerabilities in Web Applications\n\n"
+    echo -e "Shodanizer is an advanced automation tool for optimizing Shodan scans, providing swift insights into potential vulnerabilities for both IP addresses and domains\n\n"
     echo -e "Usage: $0 [options]\n\n"
     echo "Options:"
     echo "  -h, --help              Display help information"
