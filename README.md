@@ -37,7 +37,7 @@ This will display help for the tool. Here are the options it supports.
 
                             Made by Satya Prakash (0xKayala)                
 
-Shodanizer is a Powerful Automation tool for detecting XSS, SQLi, SSRF, Open-Redirect, etc. vulnerabilities in Web Applications
+Shodanizer is an advanced automation tool for optimizing Shodan scans, providing swift insights into potential vulnerabilities for both IP addresses and domains.
 
 Usage: /usr/local/bin/shodanizer [options]
 
