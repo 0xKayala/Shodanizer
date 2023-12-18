@@ -12,7 +12,8 @@ Unlock the potential of Shodan's data with Shodanizer's user-friendly interface.
 
 
 # Screenshot
-![image](https://github.com/0xKayala/Shodanizer/assets/16838353/76437f2b-6128-4da1-a2f4-f751d8a30b8e)
+![image](https://github.com/0xKayala/Shodanizer/assets/16838353/fb8443e0-25b6-4d45-8cfa-4a0abaa74a82)
+
 
 
 # Output
