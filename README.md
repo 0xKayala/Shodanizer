@@ -29,14 +29,22 @@ This will display help for the tool. Here are the options it supports.
 
 
 ```console
+   _____ __              __            _                
+  / ___// /_  ____  ____/ /___ _____  (_)___  ___  _____
+  \__ \/ __ \/ __ \/ __  / __ `/ __ \/ /_  / / _ \/ ___/
+ ___/ / / / / /_/ / /_/ / /_/ / / / / / / /_/  __/ /    
+/____/_/ /_/\____/\__,_/\__,_/_/ /_/_/ /___/\___/_/  v1.0.0  
+
+                            Made by Satya Prakash (0xKayala)                
+
 Shodanizer is a Powerful Automation tool for detecting XSS, SQLi, SSRF, Open-Redirect, etc. vulnerabilities in Web Applications
 
-Usage: /usr/local/bin/nf [options]
+Usage: /usr/local/bin/shodanizer [options]
 
 Options:
   -h, --help              Display help information
-  -d, --domain <domain>   Domain to scan for XSS, SQLi, SSRF, Open-Redirect..etc vulnerabilities
-  -f, --file <filename>   File containing multiple domains/URLs to scan
+  -d, --domain <domain>   Domain to scan with Shodan
+  -i, --ip <ip address>   IP Address to scan with Shodan
 ```  
 
 ### Steps to Install:
