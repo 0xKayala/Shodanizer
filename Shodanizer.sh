@@ -42,11 +42,13 @@ do
             ;;
         -d|--domain)
             domain="$2"
+            target="$domain"
             shift
             shift
             ;;
         -i|--ip)
             ip="$2"
+            target="$ip"
             shift
             shift
             ;;
@@ -56,9 +58,6 @@ do
             ;;
     esac
 done
-
-echo "Enter the target IP or domain:"
-read target
 
 # Check if the target is an IP address or Domain
 if [[ $target =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
