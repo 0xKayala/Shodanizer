@@ -77,10 +77,10 @@ fi
 # Check if the target is an IP address or Domain
 if [[ $target =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
     echo "Scanning IP: $target"
-    shodan host "$target" > "$output"
+    shodan host "$target" | tee >(cat > "$output")
 else
     echo "Scanning domain: $target"
-    shodan domain "$target" > "$output"
+    shodan domain "$target" | tee >(cat > "$output")
 fi
 
 echo "Shodan Scan is completed. The Output is saved to: $output"
