@@ -23,6 +23,7 @@ display_help() {
     echo "  -h, --help              Display help information"
     echo "  -d, --domain <domain>   Domain to scan with Shodan"
     echo "  -i, --ip <ip address>   IP Address to scan with Shodan"
+    echo "  -o, --output <file>     Output file name (default: domain.txt or IP.txt)"
     exit 0
 }
 
@@ -52,6 +53,11 @@ do
             shift
             shift
             ;;
+        -o|--output)
+            output="$2"
+            shift
+            shift
+            ;;
         *)
             echo "Unknown option: $key"
             display_help
@@ -59,13 +65,22 @@ do
     esac
 done
 
+# Set default output file if not provided
+if [ -z "$output" ]; then
+    if [ -n "$domain" ]; then
+        output="$domain.txt"
+    elif [ -n "$ip" ]; then
+        output="$ip.txt"
+    fi
+fi
+
 # Check if the target is an IP address or Domain
 if [[ $target =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
     echo "Scanning IP: $target"
-    shodan host "$target"
+    shodan host "$target" > "$output"
 else
     echo "Scanning domain: $target"
-    shodan domain "$target"
+    shodan domain "$target" > "$output"
 fi
 
-echo "Shodan Scan is completed"
+echo "Shodan Scan is completed. The Output is saved to: $output"
