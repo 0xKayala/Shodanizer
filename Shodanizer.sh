@@ -30,7 +30,7 @@ display_help() {
 # Check if Shodan is installed, if not, install it
 if ! command -v shodan &> /dev/null; then
     echo "Installing Shodan..."
-    pip3 install -U --user shodan
+    sudo pip3 install -U --user shodan
 fi
 
 # Parse command line arguments
