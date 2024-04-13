@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Rename and move Shodanizer.sh file to /usr/bin/shodanizer
-sudo mv Shodanizer.sh /usr/bin/shodanizer
+# Rename and move Shodanizer.sh file to /usr/bin/sd
+sudo mv Shodanizer.sh /usr/bin/sd
 
 # Make the Shodanizer file executable
-sudo chmod u+x /usr/bin/shodanizer
+sudo chmod u+x /usr/bin/sd
 
 # Remove the Shodanizer folder from the home directory
 if [ -d "$home_dir/Shodanizer" ]; then
@@ -12,4 +12,4 @@ if [ -d "$home_dir/Shodanizer" ]; then
     rm -r "$home_dir/Shodanizer"
 fi
 
-echo "Shodanizer has been installed successfully! Now Enter the command 'shodanizer' to run the tool."
+echo "Shodanizer has been installed successfully! Now Enter the command 'sd' to run the tool."
