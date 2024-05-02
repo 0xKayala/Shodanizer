@@ -49,12 +49,10 @@ Options:
   -i, --ip <ip address>   IP Address to scan with Shodan
 ```  
 
-### Steps to Install:
-1. git clone https://github.com/0xKayala/Shodanizer.git
-2. cd Shodanizer
-3. sudo chmod +x install.sh
-4. ./install.sh <br>
-5. shodanizer -h
+### Oneliner Command to Install this Tool:
+```
+git clone https://github.com/0xKayala/Shodanizer.git && cd Shodanizer && sudo chmod +x install.sh && ./install.sh && sd -h && cd ..
+```
 
 Made by
 `Satya Prakash` | `0xKayala` \
