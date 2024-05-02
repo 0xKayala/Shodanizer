@@ -49,7 +49,7 @@ Options:
   -i, --ip <ip address>   IP Address to scan with Shodan
 ```  
 
-### Oneliner Command to Install this Tool:
+### Oneline Command to Install this Tool:
 ```
 git clone https://github.com/0xKayala/Shodanizer.git && cd Shodanizer && sudo chmod +x install.sh && ./install.sh && sd -h && cd ..
 ```
